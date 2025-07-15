@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Task Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <!-- Main Content Area -->
+    <!-- <div class="main-content" id="mainContent"> -->
+        <main class="main-content" id="mainContent">
+        <!-- Add Task Card -->
+        <section  class="main-card add-task-card" id="addTaskCard">
+            <div class="card-header">
+                <div class="card-controls">
+                    <button class="control-btn expand-btn" id="expandAddTask">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="control-btn minimize-btn" id="minimizeAddTask">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="control-btn close-btn" id="closeAddTask">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>Add Task</h2>
+                <button class="add-task-btn" id="showAddTaskModal">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Tasks Categories Card -->
+        <section class="main-card tasks-card" id="tasksCard">
+            <div class="card-header">
+                <div class="card-controls">
+                    <button class="control-btn expand-btn" id="expandTasks">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="control-btn minimize-btn" id="minimizeTasks">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="control-btn close-btn" id="closeTasks">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>Categories</h2>
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="work">Work</button>
+                    <button class="category-btn" data-category="personal">Personal</button>
+                    <button class="category-btn" data-category="urgent">Urgent</button>
+                    <button class="category-btn" data-category="not-important">Not Important</button>
+                </div>
+                <h3>Tasks</h3>
+                <div class="tasks-container" id="tasksContainer">
+                    <!-- Tasks will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Card -->
+        <section class="main-card achievements-card" id="achievementsCard">
+            <div class="card-header">
+                <div class="card-controls">
+                    <button class="control-btn expand-btn" id="expandAchievements">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="control-btn minimize-btn" id="minimizeAchievements">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="control-btn close-btn" id="closeAchievements">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>Achievement</h2>
+                <div class="achievements-container" id="achievementsContainer">
+                    <!-- Completed tasks will be shown here -->
+                </div>
+                <div class="navigation-dots">
+                    <button class="nav-dot" id="prevAchievement">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-dot" id="nextAchievement">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Score Card -->
+        <section class="main-card score-card" id="scoreCard">
+            <div class="card-header">
+                <div class="card-controls">
+                    <button class="control-btn expand-btn" id="expandScore">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                    <button class="control-btn minimize-btn" id="minimizeScore">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="control-btn close-btn" id="closeScore">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>Your Score</h2>
+                <div class="score-display">
+                    <div class="total-score">
+                        <div class="progress-circle">
+                            <div class="progress-text" id="totalProgress">0/0</div>
+                        </div>
+                    </div>
+                    <div class="task-scores" id="taskScoresContainer">
+                        <!-- Individual category scores will be added here -->
+                    </div>
+                    <div class="score-navigation">
+                        <button class="score-nav-btn" id="prevScore">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="score-nav-btn" id="nextScore">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-card purple-card" id="navAddTask">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button class="nav-card green-card" id="navTasks">
+            <i class="fas fa-tasks"></i>
+        </button>
+        <button class="nav-card yellow-card" id="navAchievements">
+            <i class="fas fa-trophy"></i>
+        </button>
+        <button class="nav-card pink-card" id="navScore">
+            <i class="fas fa-chart-line"></i>
+        </button>
+        <button class="nav-card light-card" id="themeToggle">
+            <i class="fas fa-lightbulb"></i>
+        </button>
+    </nav>
+
+    <!-- Add Task Modal -->
+    <div class="modal-overlay" id="addTaskModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Task</h3>
+                <button class="close-modal" id="closeModal" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="taskInput">Task Title</label>
+                    <input type="text" id="taskInput" placeholder="Enter your task..." maxlength="100">
+                </div>
+                
+                <div class="form-group">
+                    <label>Category</label>
+                    <div class="category-selection">
+                        <label class="category-option">
+                            <input type="radio" name="taskCategory" value="work" checked>
+                            <span>Work</span>
+                        </label>
+                        <label class="category-option">
+                            <input type="radio" name="taskCategory" value="personal">
+                            <span>Personal</span>
+                        </label>
+                        <label class="category-option">
+                            <input type="radio" name="taskCategory" value="urgent">
+                            <span>Urgent</span>
+                        </label>
+                        <label class="category-option">
+                            <input type="radio" name="taskCategory" value="not-important">
+                            <span>Not Important</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="taskStartTime">Start Time</label>
+                        <input type="datetime-local" id="taskStartTime">
+                    </div>
+                    <div class="form-group half">
+                        <label for="taskDeadline">Deadline</label>
+                        <input type="datetime-local" id="taskDeadline">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" class="more-details-btn" id="toggleMoreDetails">
+                        <i class="fas fa-plus"></i>
+                        <span>More Details</span>
+                    </button>
+                    <div class="more-details-container" id="moreDetailsContainer">
+                        <textarea id="taskDescription" placeholder="Add task description..." rows="4"></textarea>
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addTaskBtn" disabled>Add Task</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Details Modal -->
+    <div class="modal-overlay" id="taskDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Task Details</h3>
+                <button class="close-modal" onclick="taskManager.closeTaskDetails()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="detail-item">
+                    <label>Task Name:</label>
+                    <span id="detailTitle"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Category:</label>
+                    <span id="detailCategory"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Created:</label>
+                    <span id="detailCreated"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Start Time:</label>
+                    <span id="detailStartTime"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Deadline:</label>
+                    <span id="detailDeadline"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Progress:</label>
+                    <span id="detailProgress"></span>
+                </div>
+                <div class="detail-item">
+                    <label>Status:</label>
+                    <span id="detailStatus"></span>
+                </div>
+                <div class="detail-item description-item" id="detailDescriptionContainer">
+                    <label>Description:</label>
+                    <div class="description-content" id="detailDescription"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i>
+        <span>Task added successfully!</span>
+    </div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
