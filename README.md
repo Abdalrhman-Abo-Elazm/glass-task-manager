@@ -75,6 +75,14 @@ cd glass-task-manager
 Then open `index.html` in any browser.
 
 ---
+---
+
+## 📽️ Project Demo
+
+[Watch the video explanation on Google Drive](https://drive.google.com/drive/folders/1w6B1erjJ1IqfxYIDIKUQcC_nO9ZXLc-x?usp=sharing)
+
+
+---
 
 ## 🧠 AI Contribution
 
@@ -82,7 +90,6 @@ This project was enhanced using **ChatGPT**:
 
 - ✍️ Writing clear and meaningful comments for all functions and modules
 - ✅ Reviewing structure to ensure **clean code principles**
-- 💡 Helping brainstorm UX and feature ideas
 - 📄 Assisting in writing this README documentation
 
 ---
@@ -109,7 +116,7 @@ project-root/
 **Abdalrhman Aboalzm**
 - Front-End Developer | Student at Faculty of Computers and Information
 - GitHub: [your-github-link](https://github.com/Abdalrhman-Abo-Elazm)
-
+- linkedin: [your-github-link](www.linkedin.com/in/abdalrhman-abo-el-azm-08992b2a5)
 ---
 
 ## 📌 Project Status
