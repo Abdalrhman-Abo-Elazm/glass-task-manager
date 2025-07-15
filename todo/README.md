@@ -68,11 +68,19 @@ This project was created from scratch with a focus on front-end excellence, modu
 ## 🔧 Installation
 
 ```bash
-git clone https://github.com/your-username/glass-task-manager.git
+git clone https://github.com/Abdalrhman-Abo-Elazm/glass-task-manager
 cd glass-task-manager
 ```
 
 Then open `index.html` in any browser.
+
+---
+---
+
+## 📽️ Project Demo
+
+[Watch the video explanation on Google Drive](https://drive.google.com/drive/folders/1w6B1erjJ1IqfxYIDIKUQcC_nO9ZXLc-x?usp=sharing)
+
 
 ---
 
@@ -82,7 +90,6 @@ This project was enhanced using **ChatGPT**:
 
 - ✍️ Writing clear and meaningful comments for all functions and modules
 - ✅ Reviewing structure to ensure **clean code principles**
-- 💡 Helping brainstorm UX and feature ideas
 - 📄 Assisting in writing this README documentation
 
 ---
