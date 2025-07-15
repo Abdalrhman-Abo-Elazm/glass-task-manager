@@ -15,6 +15,7 @@
 - [📌 Planned Enhancements](#-planned-enhancements)
 - [🔧 Installation](#-installation)
 - [🎥 Demo Video](#-demo-video)
+- [🔗 Links](#-links)
 - [🧠 AI Contribution](#-ai-contribution)
 - [📁 Folder Structure](#-folder-structure)
 - [👨‍💻 Author](#-author)
@@ -81,7 +82,13 @@ Then open `index.html` in any browser.
 
 [Watch the video explanation on Google Drive](https://drive.google.com/drive/folders/1w6B1erjJ1IqfxYIDIKUQcC_nO9ZXLc-x?usp=sharing)
 
+---
 
+## 🔗 Links
+
+- 🌐 **Live Site**: [Live Preview](https://glass-task-manager.netlify.app/)
+
+---
 ---
 
 ## 🧠 AI Contribution
