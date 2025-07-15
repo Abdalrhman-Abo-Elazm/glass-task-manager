@@ -69,7 +69,7 @@ This project was created from scratch with a focus on front-end excellence, modu
 ## 🔧 Installation
 
 ```bash
-git clone https://github.com/Abdalrhman-Abo-Elazm/glass-task-manager
+git clone https://github.com/Abdalrhman-Abo-Elazm/glass-task-manager.git
 cd glass-task-manager
 ```
 
