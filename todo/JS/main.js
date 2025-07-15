@@ -627,13 +627,13 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // ...existing code...
 
-    // زر التفاصيل في المودال
+    // DetailsBtn
     const toggleBtn = document.getElementById('toggleMoreDetails');
     const detailsContainer = document.getElementById('moreDetailsContainer');
     const icon = toggleBtn.querySelector('i');
     const text = toggleBtn.querySelector('span');
 
-    // إخفاء التفاصيل في البداية
+    // Hide
     detailsContainer.style.display = 'none';
 
     toggleBtn.addEventListener('click', () => {
