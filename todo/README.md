@@ -116,7 +116,7 @@ project-root/
 **Abdalrhman Aboalzm**
 - Front-End Developer | Student at Faculty of Computers and Information
 - GitHub: [your-github-link](https://github.com/Abdalrhman-Abo-Elazm)
-
+- linkedin: [your-github-link](www.linkedin.com/in/abdalrhman-abo-el-azm-08992b2a5)
 ---
 
 ## 📌 Project Status
